@@ -11,6 +11,24 @@
 
 (function() {
 
-    // your code here
+    const target = document.getElementById("target");
+    const numRows = 10;
+    const numColumn = 10;
+    
+    let table = document.createElement("table");
+    target.appendChild(table);
+
+    for(let i=0;i<numRows;i++){
+        let row = document.createElement("tr")
+        table.appendChild(row)
+
+        for(let y=0;y<numColumn;y++){
+            let column = document.createElement("td")
+            row.appendChild(column)
+            column.innerHTML = (i+1)*(y+1);
+
+        }
+
+    }
 
 })();
