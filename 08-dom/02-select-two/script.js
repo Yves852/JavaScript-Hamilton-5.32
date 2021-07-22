@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-
+document.querySelector("#target").innerHTML= "owned"
     // your code here
 
 })();
