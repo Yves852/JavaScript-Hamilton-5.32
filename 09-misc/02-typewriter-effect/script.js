@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
+    let target = document.getElementById("target")
+    target.innerHTML = target.textContent.replace(/\S/g, "<span class='letters'>$&</span>")
+    let element = document.querySelectorAll(".letters")
+    
+    element.forEach(el => el.style.opacity ='0')
+
+
+    for(let i=0; i<element.length;i++){
+        setTimeout(function(){
+            element[i].style.opacity = '1'
+        } , 150 * i)
+
+    }
 
 })();
