@@ -39,4 +39,12 @@
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", function(){
+        let randomBird = Math.floor(Math.random()*birds.length)
+        let randomAdjective = Math.floor(Math.random()*adjectives.size)
+        let determinant = birds[randomBird].fem === true ? "La" : "Le"; // this is a ternary conditional operator. it acts as a if...else : condition ? "what happens if condition is true" : "what happens if condition is false (else)"
+        let accord = birds[randomBird].fem === true ? "e" : "";
+        let oiseau = `${determinant} ${birds[randomBird].name} ${Array.from(adjectives)[randomAdjective]}${accord}`
+        document.getElementById("target").innerHTML = oiseau
+    })
 })();
