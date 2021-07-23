@@ -10,7 +10,20 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
+    document.getElementById("target").innerHTML = localStorage.clickcount;
+    function clickCounter() {
+        if (typeof(Storage) !== "undefined") {
+           
+          if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+          } else {
+            localStorage.clickcount = 1;
+          }
+          document.getElementById("target").innerHTML = localStorage.clickcount;
+        } else {
+          document.getElementById("target").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+      }
+      document.getElementById('increment').addEventListener('click',clickCounter)
 
 })();
