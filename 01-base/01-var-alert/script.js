@@ -9,7 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
+// Bonsoir ! (Lucas).
+
 (function() {
-    // your code here
+    const alertbox = 'Hello, World !';
+    alert(alertbox);
+    // alert('Hello World !');
 
 })();
