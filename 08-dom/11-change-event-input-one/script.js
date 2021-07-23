@@ -10,7 +10,18 @@
 // You will have time to focus on it later.
 
 (function() {
-
     // your code here
+    document.getElementById("pass-one").maxLength = 10; // limite la saisie de caractère à 10 MAX.
 
+    document.getElementById("pass-one").addEventListener("input", function (){
+        const a = document.getElementById("pass-one").value;
+        console.log(a.value);
+
+        let b = a.length;
+        console.log(b);
+    
+        const c = document.getElementById("counter").innerText = b + "/10";
+        console.log(c);
+    });
+     
 })();
