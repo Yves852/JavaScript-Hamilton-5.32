@@ -12,5 +12,12 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", function (){
+        let r = Math.floor(255*Math.random());
+        let g = Math.floor(255*Math.random());
+        let b = Math.floor(255*Math.random());
+        document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+    })
+
 
 })();
