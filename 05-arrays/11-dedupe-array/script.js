@@ -29,5 +29,10 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        const doublons = [...new Set(fruits)]
+        document.getElementById("run").addEventListener("click", console.log(doublons));
+    });
+    
 
 })();
