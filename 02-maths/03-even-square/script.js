@@ -13,8 +13,11 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
-
-    });
+        for (var input = 1; input <= 21; input++) {
+        document.write("The square of " + input + " is " + Math.pow(input, 2) + ". ");
+               } 
+    
+        });
+    
 
 })();
