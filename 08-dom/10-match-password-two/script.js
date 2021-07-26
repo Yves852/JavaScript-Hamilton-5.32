@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function matchPassword() {  
+        const psw1 = document.getElementById("pass-one").value;  
+        const psw2 = document.getElementById("pass-two").value;  
+        if(psw1 != psw2) {   
+            
+            document.getElementById("pass-one").setAttribute("class", "error");
+            document.getElementById("pass-two").setAttribute("class", "error");
+            
+        } else {  
+             alert("Password created!");
+        };  
+      });
 
 })();
