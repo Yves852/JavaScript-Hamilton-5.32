@@ -102,4 +102,5 @@
         
         console.log(somme);
     });
+    
 })();

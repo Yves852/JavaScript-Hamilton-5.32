@@ -14,4 +14,5 @@
   tonNom=prompt("Quel est votre nom ?");
   alert("Salut ! "+tonNom);
 
+  
 })();
