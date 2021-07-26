@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
+  tonNom=prompt("Quel est votre nom ?");
+  alert("Salut ! "+tonNom);
 
 })();

@@ -89,6 +89,17 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click",function(){
 
+        let age = new Array;
+    for (let i=0; i<14; i++){
+            age[i] = people[i].age;
+    }
+    
+    let somme = age.reduce((a, b)=> {
+    return a + b;
+    },0);
+        
+        console.log(somme);
+    });
 })();
