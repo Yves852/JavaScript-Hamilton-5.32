@@ -1,3 +1,4 @@
+
 /* becode/javascript
  *
  * /05-arrays/12-manipulate-set/script.js - 5.12: manipulation d'un Set
@@ -23,5 +24,12 @@
         "cherry",
     ]);
 
-    // your code here
+  document.getElementById("run").addEventListener("click",function(){
+    fruits.add("banane")
+    fruits.add("kiwi")
+    fruits.delete("apple")
+    fruits.delete("cherry")
+    console.log(fruits)
+    });
 })();
+
