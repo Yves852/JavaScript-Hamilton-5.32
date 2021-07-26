@@ -13,7 +13,7 @@
     document.getElementById("run").addEventListener("click", function() {
     
         const me = {
-            nom: "Eva",
+            name: "Eva",
             lastname: "Mélinand",
             age: 26,
             city: "Liège",
