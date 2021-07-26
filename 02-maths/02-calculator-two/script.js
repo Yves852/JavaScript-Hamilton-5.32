@@ -14,6 +14,24 @@
 
     const performOperation = operation => {
         // perform the operation
+        var nb1 = parseFloat(document.getElementById("op-one").value);
+        var nb2 = parseFloat(document.getElementById("op-two").value);
+        switch (operation) {
+            case "addition" :
+                alert(nb1+nb2);
+                break;
+            case "substraction" :
+                alert(nb1-nb2);
+                break;
+            case "multiplication" :
+                alert(nb1*nb2);
+                break;
+            case "division" :
+                alert(nb1/nb2);
+                break;
+            default :
+                alert("error")
+        }
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>
