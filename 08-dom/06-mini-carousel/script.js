@@ -1,13 +1,4 @@
-/* becode/javascript
- *
- * /06-dom/06-mini-carousel/script.js - 6.6: mini carousel
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
 
 (function() {
 
@@ -19,6 +10,16 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    var counter = 0; 
+
+    document.querySelector("button").addEventListener("click", function() {
+    
+        document.querySelector("img").src= gallery[counter];
+        counter++;
+        if (counter >= gallery.length) {
+            counter=0;
+        }
+
+          });
 
 })();
