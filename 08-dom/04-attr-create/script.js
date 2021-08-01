@@ -12,5 +12,11 @@
 (function() {
 
     // your code here
+    const source = document.getElementById("source")
+    const dataImage = source.getAttribute('data-image')
+    const target = document.getElementById("target")
 
+    let img = document.createElement('img')
+    target.appendChild(img)
+    img.src = dataImage
 })();

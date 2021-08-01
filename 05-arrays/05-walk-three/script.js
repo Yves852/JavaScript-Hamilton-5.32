@@ -40,5 +40,7 @@
     ];
 
     // your code here
-
+    
+    const run = document.getElementById("run");
+    people.forEach(person => console.log(person.firstname));
 })();
