@@ -72,4 +72,3 @@ animate (p2,1); // (il faut bien lui dire de démarrer son défilement quelque p
 animate (p3,2); // (pour qu'il soit en train de défiler dès que la page est chargée)
 animate (p4,3); // (et pour chaque morceau de numéro)
 
-

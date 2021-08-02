@@ -10,10 +10,11 @@
         "../../_shared/img/map.svg",
     ];
 
+    // your code here
     var counter = 0; 
 
     document.querySelector("button").addEventListener("click", function() {
-    
+
         document.querySelector("img").src= gallery[counter];
         counter++;
         if (counter >= gallery.length) {
@@ -21,5 +22,4 @@
         }
 
           });
-
 })();
