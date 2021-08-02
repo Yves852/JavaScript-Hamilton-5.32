@@ -14,8 +14,8 @@
 
     const performOperation = operation => {
         // perform the operation
-        var nb1 = parseFloat(document.getElementById("op-one").value);
-        var nb2 = parseFloat(document.getElementById("op-two").value);
+        let nb1 = parseInt(document.getElementById("op-one").value);
+        let nb2 = parseInt(document.getElementById("op-two").value);
         switch (operation) {
             case "addition" :
                 alert(nb1+nb2);
