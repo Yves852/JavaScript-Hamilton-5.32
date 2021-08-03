@@ -9,14 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  document.getElementById("numbers").readOnly = false;
 
-    // to get the value of an input: document.getElementById("element-id").value
+  let a = document.getElementById("numbers").value;
 
-    document.getElementById("run").addEventListener("click", function() {
-
-        // your code here
-
+  document.getElementById("run").addEventListener("click", function () {
+    array = JSON.parse("[" + a + "]");
+    array.sort(function (a, b) {
+      return a - b;
     });
-
+    alert(array);
+  });
 })();
