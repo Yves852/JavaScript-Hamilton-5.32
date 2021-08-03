@@ -11,22 +11,18 @@
 
 (function() {
 
+  let test = window.prompt("Do you want some cake ?");
+
+  if(test.toUpperCase() === "YES"){
+          alert ("Congraticulation");
+      }
   
-
-  var questions = () => {
-    const Age = prompt("Please enter your age");
-      const Gender = prompt("Please enter your age (male or female) ?");
-      const Adress = prompt("In which town do you live in ? ");
-      const Rez = confirm('Do you confirm those informations     Age = '+ Age +' Gender= ' + Gender + 'Adresse =' + Adress);
-
-      if (Rez == true ) {
-          alert("well bravo");
+  if(test.toUpperCase() === "NO"){
+          alert ("More cake for me then :p !");
       }
-      else {
-          questions () 
-      }
-  }
 
-  questions() 
+  // var = Portée globale.
+  // let = Portée limitée à celle du bloc courant.
+  // const = Portée -> celle du bloc comme let.
 
 })();
