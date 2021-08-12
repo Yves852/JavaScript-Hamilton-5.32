@@ -10,5 +10,23 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  const template = document.getElementById("tpl-hero");
+  const target = document.getElementById("target");
+
+  document.getElementById("run").addEventListener("click", async () => {
+    let response = await fetch("http://localhost:3000/heroes");
+    let heroes = await response.json();
+
+    //   let powers = templateClone.querySelector(".powers");
+    heroes.forEach(({ name, alterEgo, abilities }) => {
+      let templateClone = template.content.cloneNode(true);
+
+      templateClone.querySelector(".name").innerText = name;
+      templateClone.querySelector(".alter-ego").innerText = alterEgo;
+      templateClone.querySelector(".powers").innerText = abilities.join(", ");
+
+      target.append(templateClone);
+    });
+  });
 })();
