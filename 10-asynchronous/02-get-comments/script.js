@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+    window.lib.getPosts((err,posts)=>{
+        posts.forEach(post => {
+            window.lib.getComments(post.id,(err,comments)=>{
+                post.comments = comments;
+                console.log(post)
+            })
+            
+        });
+    })
 })();

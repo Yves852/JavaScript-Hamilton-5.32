@@ -10,5 +10,27 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  document.getElementById("run").addEventListener("click", async () => {
+    try {
+      let id = document.getElementById("hero-id").value;
+      console.log(id);
+      if (!id || isNaN(id)) {
+        throw new Error("Please give a valid id.");
+      }
+
+      let response = await fetch(`http://localhost:3000/heroes/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("No hero with that ID");
+      }
+    } catch (err) {
+      alert(err);
+    }
+  });
 })();

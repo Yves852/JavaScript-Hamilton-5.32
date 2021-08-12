@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  document.getElementById("run").addEventListener("click", () => {
+    window.lib.getPosts().then((posts) => {
+      posts.forEach((post) => {
+        window.lib.getComments(post.id).then((comments) => {
+          post.comments = comments;
+          console.log(post.comments);
+        });
+      });
+    });
+  });
 })();
